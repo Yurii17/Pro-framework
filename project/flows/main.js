@@ -28,7 +28,7 @@ async function loginInSystem(userData = {}) {
  * @param {string|number|null} [userData.password] password
  * @return {Promise<void>}
  */
- async function checkThatAfterFailedLoginFieldsAreFilled(userData = {}) {
+async function checkThatAfterFailedLoginFieldsAreFilled(userData = {}) {
     const {login} = await main.get({login: fieldsToNull(userData)});
     Object.keys(userData).forEach((key) => {
         expect(userData[key]).toEqual(login[key], `Login form ${key} element should have value ${userData[key]}`);

@@ -13,13 +13,8 @@ const {LoginFragment} = require('./fragments/login');
 
 /**
  * @typedef {Object} MainPageInteractionInterface
- * @property {(data: {
- *  login?: LoginSendKeysAction;
- * }) => Promise<void>} sendKeys sendKeys method
- *  @property {(data: {
- *  header?: HeaderCommonAction;
- *  login?: LoginSendKeysAction;
- * }) => Promise<void>} click click method
+ * @property {(data: {login?: LoginSendKeysAction;}) => Promise<void>} sendKeys sendKeys method
+ * @property {(data: {header?: HeaderCommonAction; login?: LoginSendKeysAction;}) => Promise<void>} click click method
  */
 
 class MainPage extends BasePage {
